@@ -1,0 +1,44 @@
+{
+  "name": "advanced-ai-project-manager",
+  "version": "1.0.0",
+  "description": "Cursor AI-style project management with PWA capabilities",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "dev:https": "HTTPS=true nodemon server.js",
+    "dev:full": "concurrently \"npm run dev\" \"cd frontend && npm start\"",
+    "build": "cd frontend && npm run build",
+    "test": "jest",
+    "setup": "chmod +x scripts/setup.sh && ./scripts/setup.sh"
+  },
+  "keywords": ["ai", "project-management", "pwa", "cursor-ai", "claude"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "sqlite3": "^5.1.6",
+    "sqlite": "^5.0.1",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.3.1",
+    "ws": "^8.14.2",
+    "googleapis": "^126.0.1",
+    "google-auth-library": "^9.2.0",
+    "sharp": "^0.33.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "chokidar": "^3.5.3",
+    "uuid": "^9.0.1",
+    "node-cron": "^3.0.2",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
