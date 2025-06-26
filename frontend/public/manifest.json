@@ -1,0 +1,46 @@
+{
+  "name": "Advanced AI Project Manager",
+  "short_name": "AI ProjectMgr",
+  "description": "Cursor AI-style project management with offline capabilities",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/handle-file",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "image/*": [".jpg", ".jpeg", ".png"],
+        "text/plain": [".txt", ".md"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "params": {
+      "files": [{"name": "files", "accept": ["image/*", ".pdf"]}]
+    }
+  }
+}
